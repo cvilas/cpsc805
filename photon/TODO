@@ -1,0 +1,56 @@
+Bugs and incomplete features
+----------------------------
+1. Box intersection and normals 
+	- see reflection anomaly 
+	- eyepoint should be outside box
+2. Quad bump mapping
+3. General Polygons
+4. Quadrics - cones, hyperbola, ellipse, torus
+5. Translation, rotation and scaling - transformation matrix
+6. Adaptive anti-aliasing
+7. check banding due to diffuse lights.
+8. Do code review
+9. Optimizations - bounding boxes, faster intersection tests, code cleanups
+10. Compose scenes - wine glass, office room, billiard table, golf course
+
+11. math operators problems.
+ a)  color.r = (1.0/numRays)*((numRays-1) * color.r + tmpColor.r);
+     color.g = (1.0/numRays)*((numRays-1) * color.g + tmpColor.g);
+     color.b = (1.0/numRays)*((numRays-1) * color.b + tmpColor.b);
+     
+ b)  color = (1.0/numRays)*((numRays-1) * color + tmpColor);
+
+ (a) works but (b) does not. Check why.
+
+12. Photon mapping: Photon map for indirect lights, caustics. 
+    Check photon map code for low direct light bug.
+13. Optimize code. Convert to C++ class for easier code.
+14. Acceleration techniques. 
+
+LIST OF FEATURES 
+================
+* Acceleration techniques
+* Adaptive anti-aliasing
+* Ambient, diffuse and specular lights - DONE
+* Animation
+* Arbitrary camera placement - DONE
+* Bounding boxes
+* Bump mapping on all supported objects
+* Caustics
+* Constructive solid geometry
+* Distributed Ray tracing
+* Depth of field - DONE
+* Gloss - DONE
+* Lights - directional, area
+* Objects - spheres, planes, polygons, triangles, quads, boxes
+* Quadrics - arbitrary, through implicit equation
+* Quadrics - cones, ellipsoids, hyperboloids, paraboloids, cylinders - see glassner
+* Reflections - DONE
+* Refractions - DONE
+* Scene description file - DONE
+* Soft shadows - DONE
+* Spatial subdivision for acceleration
+* Surfaces of revolution
+* Texture mapping on all supported objects
+* Transformations - translation, rotation scaling
+

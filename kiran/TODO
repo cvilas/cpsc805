@@ -1,0 +1,43 @@
+Bugs and incomplete features
+----------------------------
+
+1. Optimizations - bounding boxes, faster intersection tests, code cleanups
+2. object oriented design for kiran.
+3. Compose scenes - wine glass, office room, billiard table, golf course
+
+4. math operators problems.
+ a)  color.r = (1.0/numRays)*((numRays-1) * color.r + tmpColor.r);
+     color.g = (1.0/numRays)*((numRays-1) * color.g + tmpColor.g);
+     color.b = (1.0/numRays)*((numRays-1) * color.b + tmpColor.b);
+     
+ b)  color = (1.0/numRays)*((numRays-1) * color + tmpColor);
+
+ (a) works but (b) does not. Check why.
+
+
+LIST OF FEATURES 
+================
+* Adaptive anti-aliasing
+* Ambient, diffuse and specular lights - DONE
+* Animation
+* Arbitrary camera placement - DONE
+* Bounding boxes
+* Bump mapping on all supported objects
+* Constructive solid geometry
+* Depth of field - DONE
+* Gloss - DONE
+* Lights - directional, area
+* Objects - spheres, planes, polygons, triangles, quads, boxes
+* photon mapping indirect illumination, caustics
+* Quadrics - arbitrary, through implicit equation
+* Quadrics - cones, ellipsoids, hyperboloids, paraboloids, cylinders 
+           - see glassner
+* Reflections - DONE
+* Refractions - DONE
+* Scene description file - DONE
+* Soft shadows - DONE
+* Spatial subdivision for acceleration
+* Surfaces of revolution
+* Texture mapping on all supported objects
+* Transformations - translation and rotation
+

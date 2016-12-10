@@ -1,0 +1,50 @@
+KIRAN - Advanced Ray-Tracer.
+===========================
+
+(Author - Vilas K Chitrakaran <cvilas@ces.clemson.edu>)
+
+
+Introduction:
+=============
+
+This is the final version of the Ray-Tracer. The following features have 
+been added:
+  
+  1. Soft Shadows 
+  		-> Please see kiran_do_lights() in kiran.cpp for implementation
+  		-> Example scene file scenes/shadows.env
+  		   
+  2. Camera movement 
+  		-> Please see implementation of class Camera in objects.hpp
+  		-> Example scene file scenes/camera.env
+  		
+  3. Depth of Field 
+  		-> Please see getRays() function in class Camera
+  		-> Example scene file scenes/dof.env
+
+
+Program Compilation:
+====================
+
+Type 'make' to compile and create the executable kiran. Type 
+'./kiran -i <scenefile>' to run the program and create the 
+rendered scene as output.ppm. The following command line switches 
+can also be used: 
+  -o: Specify a name for the output PPM file (instead of the default 
+	output.ppm). 
+  -i: Specify the input scene file. 
+ 
+(Other global options such as image size, soft shadows and antialiasing
+parameters are now specified through the scenefile)
+  
+
+Project webpage:
+================
+
+http://ece.clemson.edu/crb/students/vilas/projects/cs805/index.htm
+
+
+------------------------------------------------------------------------
+Vilas Kumar Chitrakaran <cvilas@ces.clemson.edu>
+April 1 2004
+

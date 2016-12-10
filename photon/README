@@ -1,0 +1,71 @@
+CPSC805 Final Project - Photon mapping
+======================================
+
+(Author - Vilas K Chitrakaran <cvilas@ces.clemson.edu>)
+
+
+Introduction:
+=============
+
+The PhotonMap class in PhotonMap.hpp[cpp] provides the implementation for
+Photon map structure (almost verbatim Appendix B from Henrik Wann Jensen's 
+textbook).
+
+Photon mapping was incorporated into my ray tracer in the following manner:
+(All references to functions below are in kiran.cpp)
+
+a) Every Light class object has an object of PhotonMap class.
+b) First phase in rendering is photon mapping. kiran_photon_trace() emits 
+   photons and calls kiran_recursive_photon_trace(), which upon 
+   return provides coordinates for absorbed photons.
+c) Scattering of photons happen in kiran_recursive_photon_trace().
+d) In the ray tracing phase, kiran_recursive_trace() adds up photon estimates
+   from the photon map.
+
+Problems:
+=========
+I may not be scaling the color/power of photons properly. The photon map
+resulting from my implementation is dark. While the caustics show clearly,
+color bleeding does not show at all. I have not been able to figure the 
+cause of this problem yet.
+
+
+Program Compilation:
+====================
+
+Type 'make' to compile and create the executable kiran. Type 
+'./kiran -i <scenefile>' to run the program and create the 
+rendered scene as output.ppm. The following command line switches 
+can also be used: 
+  -o: Specify a name for the output PPM file (instead of the default 
+	output.ppm). 
+  -i: Specify the input scene file. 
+ 
+Global options such as number of photons per light are specified in the
+<Global> section of the scene file.
+
+* The directory 'scenes' contain a scene file cornell.env, a simple cornell
+ box with two spheres.
+
+* The directory 'images' contain the following images:
+    -> justPhotonMap.png: The photon map created for cornell box
+                          by my program
+    -> justPhotonMap_bright.png: Artificially enhanced photon map 
+                                 image. (BUG: My implementation seems to 
+                                 produce dark photon maps)
+    -> fullIllum.png: Image of cornell box rendered with photon map
+                      and ray tracing.
+    -> onlyRayTraced.png: Ray traced image of cornell box without
+                          the photon map
+  
+
+Project webpage:
+================
+
+http://ece.clemson.edu/crb/students/vilas/projects/cs805/index.htm
+
+
+------------------------------------------------------------------------
+Vilas Kumar Chitrakaran <cvilas@ces.clemson.edu>
+May 1 2004
+

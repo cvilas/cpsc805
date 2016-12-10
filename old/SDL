@@ -1,0 +1,131 @@
+Kiran Scene Description Language
+================================
+
+1. Coordinate System
+--------------------
+
+	* Right handed coordinate system
+	* Z axis pointing into the scene.
+	* X axis pointing up and Y axis from left to right.
+
+
+2. Vectors
+----------
+
+A vector is specified by three numeric values between a pair of angle brackets 
+and separated by commas.
+
+example: <x, y, z>
+
+
+3. Camera
+---------
+
+Camera description follows the OpenGL style and is as follows
+
+	Camera
+	{
+		focal_length f
+		ccd_size <cols, rows>
+		ccd_scale_factors <ku, kv>
+		clipping_distances <near, far>
+		position <x, y, z>
+		look_at <x, y, z>
+		up_vector <x, y, z>
+	}
+
+
+4. Describing an Object
+-----------------------
+
+4.1 Sphere
+-----------
+
+	Sphere {              
+		position <x, y, z>
+        radius r      
+		name NAME         // An identifier for the object
+		color <r, g, b>   // object color
+		ambient ka        // ambient lt. ref. coeff.
+		diffuse kd        // diffuse lt. ref. coeff.
+		phong ks          // specular lt. ref. coeff.
+		phong_size n      // specular lt. ref. exponent
+	}
+	
+
+4.2 Box
+-------
+
+	Box {
+		lower_left <x, y, z>	// near lower left corner
+		upper_right <x, y, z>   // far upper right corner
+		rotate <yaw, pitch, roll> // rotation w.r.t global frame
+		...
+	}
+	
+	Box objects are defined parallel to the axes of the global coordinate 
+system. Orientation can be changed by specifying a rotation relative to 
+the global frame.
+
+
+4.3 Cone
+--------
+
+	Cone {
+		center1 <x, y, z>
+		radius1 r	      // center and radius of one end
+		center2 <x, y, z>
+		radius2 r	      // center and radius of other end
+		...
+		open			// specify to remove end-caps (present by default)
+	}
+	
+	
+	
+4.4 Cylinder
+------------
+
+	Cylinder {
+		center1 <x, y, z>,	// Center of one end
+		center2 <x, y, z>,	// Center of the other end
+		radius r			// radius
+		open		// remove end caps
+		...
+	}
+	
+	
+4.5 Plane
+---------
+
+	Plane {
+		normal <x, y, z>
+        distance d	// surface normal and distance from origin
+					// along the direction of the normal
+		checker <r, g, b>, <r, g, b>	// checkerboard pattern with two colors
+		(-or- color <r, g, b>)          // -or- a single color
+	}
+
+
+5. Light Sources
+----------------
+
+	PointLight {
+		position <x, y, z>
+		color <r, g, b>
+	}
+
+
+6. Background
+-------------
+
+	Background {
+		color <r, g, b>
+	}
+	
+	-or-
+	
+	Background {
+		image image.ppm
+	}
+	
+	

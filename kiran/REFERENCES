@@ -1,0 +1,29 @@
+REFERENCES:
+
+C++ file/stream processing:
+http://www.cplusplus.com/ref/indexr.html
+
+
+Raytracing lecture notes. Includes intersections, transformations:
+http://mrl.nyu.edu/~dzorin/rendering/lectures/
+
+An Introduction to Ray tracing
+by Andrew Glassner (Author) 
+Hardcover: 368 pages ; Dimensions (in inches): 0.85 x 9.16 x 6.26 
+Publisher: Morgan Kaufmann; (January 28, 1989) 
+ISBN: 0122861604 
+
+good resource:
+http://www.cl.cam.ac.uk/Teaching/1999/AGraphHCI/SMAG/advgraphnotes.html
+
+Have a theme for images:        
+	-> Museum (Sculptures, paintings)        
+	-> Terrain (golf course, valleys)        
+	-> billiard table
+	-> my room
+
+Box normals:
+http://groups.google.com/groups?hl=en&lr=&ie=UTF-8&oe=UTF-8&threadm=rR3u7.1251%240F6.198522%40news.uswest.net&rnum=19&prev=/groups%3Fq%3Dbox%2Bintersection%2Bnormal%26start%3D10%26hl%3Den%26lr%3D%26ie%3DUTF-8%26oe%3DUTF-8%26selm%3DrR3u7.1251%25240F6.198522%2540news.uswest.net%26rnum%3D19
+
+transforms:
+http://www.cl.cam.ac.uk/Teaching/1999/AGraphHCI/SMAG/node2.html#SECTION00023200000000000000
