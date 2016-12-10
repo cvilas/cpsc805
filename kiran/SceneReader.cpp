@@ -1,5 +1,6 @@
 #include "SceneReader.hpp"
 #include <typeinfo>
+#include <string.h>
 
 //==================================================================
 // SceneReader::SceneReader
